@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <a href="styleLogin.css"></a>
+<style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+input [type="text"],
+input [type="password"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input [type="submit"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #4caf4c;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+
+<body>
+<form id="loginForm">
+    <h2>Login</h2>
+    <input type="text" placeholder="Enter Username" id="username" required>
+    <input type="password" placeholder="Enter Password" id="password" required>
+    <input type="submit" onclick="ValidateCredentials()" value="submit">
+
+    <div id="loginErrorMsg">
+        <p>Invalid username and/or invalid password</p>
+    </div>
+</form>
+
+<script>
+function ValidateCredentials(){
+const corUser = "admin"
+const corPsw = "12345"
+
+let username = document.getElementById("username").value;
+let password = document.getElementById("password").value;
+const loginErrorMsg = document.getElementById("loginErrorMsg")
+
+    if (username === corUser && password === corPsw ){
+        alert("Login Successfull!")
+        location.reload();
+    } 
+    else {
+        loginErrorMsg.style.opacity = 1
+    }
+
+}
+</script>
+
+
+</body>
+</html>
