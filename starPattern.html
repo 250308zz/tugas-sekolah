@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Square Patern</title>
+    <style>
+        #patterm {
+            font-family:monospace;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <h2>Full Square Patern</h2>
+    <form id="PatternForm">
+     <label for="size">size of square:</label>
+     <input type="number" id="size" name="size" min="1" required>
+     <input type="submit" value="Generate Pattern">
+    </form>
+    <pre id="pattern"></pre>
+</body>
+<script>
+    document.getElementById("patternForm").addEventListener ("submit",function (event) {
+        event.preventDefault ();
+        let size = parseInt (document.getElementById ("size").value);
+        let pattern = generatePattern(size);
+        document.getElementById ("pattern").textContent = pattern;
+    })
+    function generatePattern(size){
+        let input = document.getElementById("size").value;
+        let dataArray = input.split(',').map (Number)
+
+        
+        let hasil = ' ';
+        for (let i=1; i<=input; i++){
+            for (let j=1; j<=input; j++){
+                hasil +='*'
+            }
+            hasil +='\n'
+        }
+        let outputDiv = document.getElementById("pattern");
+    outputDiv.innerHTML = "<h2>:</h2><p>" + hasil.join(', ') + '</p>';
+
+
+    }
+
+
+
+</script>
+</html>

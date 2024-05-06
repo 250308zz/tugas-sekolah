@@ -1,10 +1,11 @@
-function dataDollar(){
-    let dollar = document.getElementById("inputDollar").value;
-    
-    let rupiah = inputDollar + (dollar * 15.000);
-   
-    let outputDiv = document.getElementById("output");
-    outputDiv.innerHTML = '<h2>Hasil:</h2><p>' + rupiah.join + '</p>'
+function processData() {
+    let inputData = document.getElementById ('inputDollar').value.trim();
+    let dataArray = inputData.split(',').map(Number);
 
+    let konversiDollar = dataArray.map(function (num) {
+        return num * 16000
+    })
+    let outputDiv = document.getElementById("output");
+    outputDiv.innerHTML = "<h2>Kurs IDR:</h2><p>" + konversiDollar.join(', ') + '</p>';
 
 }
