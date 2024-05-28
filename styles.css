@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-image: url(BLUE-GRADIENT.jpg);
+    background-size: cover;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+h1 {
+    text-align: center;
+}
+
+#question {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+}
+
+.option {
+    margin-bottom: 10px;
+}
+
+#giveUpBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submitBtn:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+}

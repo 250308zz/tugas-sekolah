@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Game</h1>
+        <div id="question"></div>
+        <div id="options"></div>
+        <div id="result"></div>
+        <button id="giveUpBtn">Give Up</button>
+    </div>
+    
+    
+    <script >
+        const questions = [
+    {
+        question: "Siapakah bintang kelas X RPL 1?",
+        options: ["Deris", "Wawak Hadi", "Farid", "Kucuy"],
+        answer: "Kucuy"
+    },
+    {
+        question: "Julukan apa yang diberikan kepada makhluk bernama M.Aditya Pasya?",
+        options: ["Telor Asin", "Singkong", "Engkong", "Rambut Jarang-Jarang"],
+        answer: "Singkong"
+    },
+    {
+        question: "Apa tragedi yang terjadi pada tanggal 22 Mei setelah kegiatan Taruna?",
+        options: ["Kebet lupa hape", "Dipukul pala vina", "Singkong kepleset", "Interview sambel bakar"],
+        answer: "Kebet lupa hape"
+    },
+    {
+        question: "Siapakah tokoh terkenal NBA?",
+        options: ["Herman Bengkulu 777", "Ambatron pemusnah massal", "Si imut chatgpt", "Stephen curry"],
+        answer: "Stephen curry"
+    },
+    {
+        question: "Siapakah sosok starboy kabupaten di kelas X ROL 1?",
+        options: ["Gerryano", "King Jarip", "Farid king frenchcrop", "Ramskuy"],
+        answer: "Farid king frenchcrop"
+    }
+];
+
+const questionElement = document.getElementById('question');
+const optionsElement = document.getElementById('options');
+const resultElement = document.getElementById('result');
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+    const q = questions[currentQuestion];
+    questionElement.textContent = q.question;
+    optionsElement.innerHTML = '';
+
+    q.options.forEach(option => {
+        const button = document.createElement('button');
+        button.textContent = option;
+        button.classList.add('option');
+        button.addEventListener('click', () => selectAnswer(option));
+        optionsElement.appendChild(button);
+    });
+}
+
+function selectAnswer(selectedOption) {
+    const correctAnswer = questions[currentQuestion].answer;
+    if (selectedOption === correctAnswer) {
+        score++;
+    }
+    currentQuestion++;
+    if (currentQuestion < questions.length) {
+        showQuestion();
+    } else {
+        showResult();
+    }
+}
+
+const giveUpButton = document.getElementById('giveUpBtn');
+giveUpButton.addEventListener('click', giveUp);
+
+function giveUp() {
+    questionElement.textContent = '';
+    optionsElement.textContent = '';
+    resultElement.textContent = "Bukan anak X RPL 1 inimah";
+}
+
+
+function showResult() {
+    questionElement.textContent = '';
+    optionsElement.textContent = '';
+    resultElement.textContent = `Kamu benar ${score} dari ${questions.length} pertanyaan.`;
+}
+
+showQuestion();
+
+    </script>
+</body>
+</html>
