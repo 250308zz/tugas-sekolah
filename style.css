@@ -1,27 +1,71 @@
-.container {
-    text-align: center;
-  }
-  
-  .board {
+*,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.container{}
+
+body {
+    background-color: black;
+}
+
+.bagian-navbar {
+    background-color: #333;
+    width: 100%;
+    height: 15vh;
+}
+
+.ul-navbar {
     display: flex;
-    flex-wrap: wrap;
-    width: 300px;
-    margin: 20px auto;
-  }
-  
-  .cell {
-    width: 100px;
     height: 100px;
-    border: 1px solid #000;
-    font-size: 2em;
-    display: flex;
-    align-items: center;
     justify-content: center;
-  }
-  
-  button {
-    font-size: 1em;
-    padding: 10px 20px;
-    margin-top: 20px;
-  }
-  
+    align-items: center;
+}
+
+.li-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 20px;
+    color: solid white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 150%;
+}
+
+.li-navbar:hover {
+    background-color:turquoise ;
+    transition: .6 ease-in ;
+    transition-delay: .3;
+    border-radius: 7px;
+}
+
+.a-navbar {
+    color: white;
+    text-decoration: none;
+}
+
+.bagian-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+.img-content {
+    height: 50%;
+    width: 50%;
+}
+
+.bagian-footer{
+    height: 10vh;
+}
+
+.h1-footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
