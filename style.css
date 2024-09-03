@@ -1,0 +1,286 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/Poppins/Poppins-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  padding: 30px;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  height: 17vh;
+}
+
+ul {
+  display: flex;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+a,
+.button-container {
+  transition: all 300ms ease;
+}
+
+.navbar {
+  list-style-type: none;
+  gap: 2rem;
+  text-decoration: none;
+  text-decoration-color: white;
+  color: black;
+}
+
+.navbar :hover {
+  color: rgb(85, 85, 85);
+  text-decoration: underline 2px solid;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(81, 81, 81);
+}
+
+.main {
+  display: flex;
+  flex: 1;
+}
+
+main {
+  padding-top: 4vh;
+  height: 69vh;
+  box-sizing: border-box;
+  min-height: fit-content;
+  flex: 5 5 100px;
+  text-align: justify;
+  margin-inline: 0px;
+}
+
+/* Home */
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  height: 0vh;
+}
+
+.profileImage {
+  display: flex;
+  height: 250px;
+  width: 250px;
+  margin: auto 0;
+  margin-top: 3rem;
+}
+
+.imgP {
+  border-radius: 50%;
+}
+
+.textSection {
+  align-self: center;
+  text-align: center;
+  margin-top: 21rem;
+}
+
+.textSection p {
+  font-weight: 600;
+}
+
+.textSection-p1 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.textSection-p2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-1 {
+  font-weight: 500;
+  transition: all 300ms ease;
+  padding: 14px 17px;
+  width: 8rem;
+  border: rgb(53, 53, 53) 2px solid;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+.button-container :hover {
+  background-color: rgb(53, 53, 53);
+  cursor: pointer;
+  color: white;
+  border-radius: 2rem;
+}
+/* Home end */
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* Biodata */
+
+#biodata {
+  display: flex;
+  justify-content: center;
+  margin-inline: 16%;
+  margin-top: 0rem;
+}
+
+.imageBio {
+  width: 250px;
+  height: 240px;
+  border-radius: 40px;
+  margin-top: 2.8rem ;
+  margin-left: 20%;
+  margin-right: 1.5rem;
+}
+
+.textBiodata {
+  margin-top: 2rem;
+}
+
+.h1-get {
+  text-align: center;
+  font-size: 23px;
+  margin-bottom: 0px;
+}
+
+.about-me {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #382c2c;
+  font-size: 20px;
+}
+
+.biodata {
+  text-align: justify;
+  font-size: 18px;
+  margin-inline: 10%;
+  color: #322e2e;
+}
+
+/* Biodata end */
+
+/* Contact */
+#contact {
+  display: flex;
+  justify-content: center;
+}
+
+.h1-contact {
+  text-align: center;
+  font-size: 30px;
+}
+
+.imgContact {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.imgWa {
+  width: 105px;
+  height: 105px;
+}
+
+.imgIg {
+  width: 90px;
+  height: 88px;
+  margin-top: 8px;
+}
+
+.contactButton {
+  justify-content: center;
+  display: flex;
+  gap: 0.8rem;
+}
+
+
+.contactLink {
+  text-decoration: none;
+}
+
+.contactLink :visited {
+  text-decoration: none;
+}
+
+.contactLink :hover {
+  background-color: rgb(53, 53, 53);
+  cursor: pointer;
+  color: white;
+}
+
+.buttonContact {
+  font-weight: 500;
+  transition: all 300ms ease;
+  padding: 14px 17px;
+  width: 8rem;
+  border: rgb(53, 53, 53) 2px solid;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+/* Skills */
+#skills {
+  display: flex;
+  justify-content: center;
+}
+
+.h1-mySkills {
+  text-align: center;
+}
+
+.detailsContainer {
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+footer {
+  padding: 3px;
+  text-align: center;
+  background-color: rgb(81, 81, 81);
+}
+
+.footer {
+  color: white;
+  font-size: 12px;
+  
+}
+
+@media all and (max-width: 550px) { 
+  main {
+    padding: 5em 0 5em 0;
+  }
+}
