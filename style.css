@@ -54,7 +54,7 @@ a,
 
 .navbar :hover {
   color: rgb(85, 85, 85);
-  text-decoration: underline 2px solid;
+  text-decoration: underline 2px;
   text-underline-offset: 1rem;
   text-decoration-color: rgb(81, 81, 81);
 }
@@ -195,6 +195,7 @@ p {
 #contact {
   display: flex;
   justify-content: center;
+  margin-top: 3rem;
 }
 
 .h1-contact {
@@ -252,25 +253,38 @@ p {
 
 /* Skills */
 #skills {
-  display: flex;
   justify-content: center;
 }
 
 .h1-mySkills {
   text-align: center;
+  font-size: 35px;
 }
 
-.detailsContainer {
+.experienceDetails {
   display: flex;
   justify-content: center;
-  
 }
 
+.experienceDetails {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  border: rgb(81, 81, 81) 2px solid;
+  padding: 40px 0px;
+  margin-inline: 30%;
+  border-radius: 40px;
+}
+
+.experienceText h3 {
+  font-size: 25px;
+}
 
 footer {
-  padding: 3px;
+  padding: 1px;
   text-align: center;
-  background-color: rgb(81, 81, 81);
+  background-color: rgb(85, 85, 85);
 }
 
 .footer {
